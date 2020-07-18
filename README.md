@@ -1,6 +1,6 @@
 # foo
 
-[image foo](images/foo.png)
+[image foo](images/foo.jpg)
 
 # foo2
 
