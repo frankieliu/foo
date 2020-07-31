@@ -18,7 +18,7 @@ ssh -Y frankliu@login.sherlock.stanford.edu
 # getting to images
 
 ```bash
-cd /home/users/frankliu/group/Images
+cd /home/groups/robertj2/frankliu/Images
 ```
 
 # (sherlock) Start interactive job
