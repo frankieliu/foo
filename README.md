@@ -15,6 +15,12 @@ Start logging into sherlock via ssh:
 ssh -Y frankliu@login.sherlock.stanford.edu
 ```
 
+# getting to images
+
+```bash
+cd /home/users/frankliu/group/Images
+```
+
 # (sherlock) Start interactive job
 
 Begin an interactive job within sherlock.
