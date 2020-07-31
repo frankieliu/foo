@@ -19,6 +19,24 @@ ssh -Y frankliu@login.sherlock.stanford.edu
 
 ```bash
 cd /home/groups/robertj2/frankliu/Images
+cd Wurzetatlas\ 2002\ vol\ 6/
+cd Root
+cd W2002.Abb.92.right.b73.1
+```
+
+# useful
+
+`ls` allows you to list all files in a directory
+`-ltr` reverse order
+
+```bash
+ls -ltr
+```
+
+# display image
+
+```bash
+ml system imagemagick graphicsmagick x11
 ```
 
 # (sherlock) Start interactive job
