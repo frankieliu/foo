@@ -39,6 +39,10 @@ ls -ltr
 ml system imagemagick graphicsmagick x11
 ```
 
+```bash
+magick display <image_name>
+```
+
 # (sherlock) Start interactive job
 
 Begin an interactive job within sherlock.
