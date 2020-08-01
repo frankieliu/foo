@@ -40,8 +40,10 @@ ml system imagemagick graphicsmagick x11
 ```
 
 ```bash
-magick display <image_name>
+gm display <image_name>
 ```
+
+[gm keyboard commands](http://www.graphicsmagick.org/display.html)
 
 # (sherlock) Start interactive job
 
