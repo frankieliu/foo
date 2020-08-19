@@ -10,6 +10,18 @@ Running usable graphics terminal within a slurm cluster.
 # set up kerberos
 [advanced connection](https://www.sherlock.stanford.edu/docs/advanced-topics/connection/#avoiding-multiple-duo-prompts)
 
+```bash
+sudo apt update
+
+# install kinit use <Tab> and <Enter> use default choices
+sudo apt-get install krb5-user
+
+# download kerberos environment
+sudo curl -o /etc/krb5.conf https://web.stanford.edu/dept/its/support/kerberos/dist/krb5.conf
+
+kinit
+```
+
 # (local) Login into sherlock
 
 Start logging into sherlock via ssh:
