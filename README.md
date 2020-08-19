@@ -7,6 +7,9 @@ Running usable graphics terminal within a slurm cluster.
 3. add python, openbox, tint2, tmux, r
 4. tunnel through to the container
 
+# set up kerberos
+[advanced connection](https://www.sherlock.stanford.edu/docs/advanced-topics/connection/#avoiding-multiple-duo-prompts)
+
 # (local) Login into sherlock
 
 Start logging into sherlock via ssh:
