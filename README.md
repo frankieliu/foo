@@ -19,7 +19,40 @@ sudo apt-get install krb5-user
 # download kerberos environment
 sudo curl -o /etc/krb5.conf https://web.stanford.edu/dept/its/support/kerberos/dist/krb5.conf
 
-kinit
+kinit frankliu@stanford.edu
+klist
+```
+
+# change ~/.ssh/config
+
+```
+Host login.sherlock.stanford.edu
+   GSSAPIDelegateCredentials yes
+   GSSAPIAuthentication yes
+
+Host login.sherlock.stanford.edu
+   ControlMaster auto
+   ControlPersist yes
+   ControlPath ~/.ssh/%l%r@%h:%p
+```
+
+In bash, change permissions on that file
+
+```bash
+# change permissions
+chmod o-rw config
+chmod g-rw config
+ls -la
+```
+
+# add ssh keys
+
+[ssh keys](https://www.sherlock.stanford.edu/docs/getting-started/connecting/)
+
+Login once to ~login.sherlock.stanford.edu~ so that an entry to ~/.ssh/known_hosts
+```bash
+ssh frankliu@login.sherlock.stanford.edu # make it a known host
+ssh-keygen -R sherlock.stanford.edu
 ```
 
 # (local) Login into sherlock
