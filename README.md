@@ -259,9 +259,9 @@ After you finished the one time setup:
     1. Singularity> . bin/start-vnc.sh
      
 1. On another local window
-    1. ssh frankliu@login.sherlock.stanford.edu -L5999:<machine name>:5999
-    1. you can change the portnumber to -L5998, etc if you get an error above
+    1. ssh frankliu@login.sherlock.stanford.edu -L5999:(machine name):5999
+    1. you can change the portnumber from -L5999 to -L5998, etc if you get an error
 
-1. Open tigervnc, connect to localhost:5999 (password: 1234)
+1. Open tigervnc, connect to localhost:99 (password: 1234)  (or localhost:98 if you used the fix above)
     1. vnc> tint2 &
     1. vnc> /home/groups/robertj2/frankliu/Apps/rstudio/bin/rstudio &
