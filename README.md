@@ -61,6 +61,8 @@ Start logging into sherlock via ssh:
 
 ```bash
 ssh -Y frankliu@login.sherlock.stanford.edu
+# don't if using tigervnc
+ssh frankliu@login.sherlock.stanford.edu
 ```
 
 # getting to images
@@ -102,6 +104,21 @@ Begin an interactive job within sherlock.
 ml system x11
 srun -c 4 -t 8:00:00 --x11 --pty bash
 ```
+
+```bash
+# without x through tigervnc for window users
+ml system
+srun -c 4 -t 8:00:00 --pty bash  # choose # cpus and # hours
+```
+
+# tigervnc
+https://github.com/TigerVNC/tigervnc/releases
+
+https://bintray.com/tigervnc/beta/tigervnc/1.11beta
+
+For windows download .exe:
+
+[tigervnc64-1.10.90.exe](https://bintray.com/tigervnc/beta/download_file?file_path=tigervnc64-1.10.90.exe)
 
 # (sherlock) Run singularity
 
@@ -229,3 +246,22 @@ Make keys be able to repeat.
 xset r on
 ```
 
+# In general
+
+After you finished the one time setup:
+
+1. All in one local window
+    1. local> ssh frankliu@login.sherlock.stanford.edu
+    1. sherlock> ml system
+    1. sherlock> srun --pty bash      # wait for a machine
+    1. sherlock> squeue -u frankliu   # jot down machine name
+    1. sworker> singularity shell /home/groups/robertj2/frankliu/Singularity/chrome-vnc-openbox-r_latest.sif 
+    1. Singularity> . bin/start-vnc.sh
+     
+1. On another local window
+    1. ssh frankliu@login.sherlock.stanford.edu -L5999:<machine name>:5999
+    1. you can change the portnumber to -L5998, etc if you get an error above
+
+1. Open tigervnc, connect to localhost:5999 (password: 1234)
+    1. vnc> tint2 &
+    1. vnc> /home/groups/robertj2/frankliu/Apps/rstudio/bin/rstudio &
