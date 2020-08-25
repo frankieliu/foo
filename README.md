@@ -65,6 +65,27 @@ ssh -Y frankliu@login.sherlock.stanford.edu
 ssh frankliu@login.sherlock.stanford.edu
 ```
 
+# Download from sherlock
+
+```bash
+sftp frankliu@login.sherlock.stanford.edu
+sftp> cd /home/groups/robertj2/frankliu/Image
+sftp> cd Wurzetatlas\ 2002\ vol\ 6/
+sftp> cd Root
+sftp> cd ..      # change to the parent directory
+sftp> lcd <local directory>
+sftp> ls         # list directory
+sftp> ls -l      # more info
+sftp> lls        # local list
+sftp> pwd        # shows present working directory
+sftp> lpwd       # local pwd
+sftp> get <filename>
+sftp> mget <filename>*
+sftp> put <filename>
+sftp> mput <filename>*
+sftp> get -r <directory name>
+```
+
 # getting to images
 
 ```bash
